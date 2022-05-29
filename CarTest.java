@@ -2,7 +2,7 @@ package apphw2;
 abstract class Car{
 	String name;
 	int price;
-	void printInfo(){System.out.println("name:"+name+" price:"+price);}
+	void printInfo(){System.out.println("차 이름은 "+name+"이고 가격은 "+price+"입니다.");}
 	abstract void printSignature();
 }
 class Benz extends Car{
@@ -11,7 +11,7 @@ class Benz extends Car{
 		this.price=price;
 	}
 	void printSignature(){
-		System.out.println(name+" Signature");
+		System.out.println("벤츠는 길에서 자주 보입니다.");
 	}
 }
 class Bmw extends Car{
@@ -20,17 +20,16 @@ class Bmw extends Car{
 		this.price=price;
 	}
 	void printSignature(){
-		System.out.println(name+" Signature");
+		System.out.println("BMW는 내가 좋아하는 차입니다.");
 	}
 }
 public class CarTest {
 	public static void main(String args[]) {
-		Benz b1=new Benz(58000000);
-		b1.printInfo();
-		b1.printSignature();
-		
-		Bmw b2=new Bmw(64000000);
-		b2.printInfo();
-		b2.printSignature();
+		Benz benz=new Benz(5000);
+		Bmw bmw=new Bmw(4500);
+		benz.printInfo();
+		bmw.printInfo();
+		benz.printSignature();
+		bmw.printSignature();
 	}
 }
