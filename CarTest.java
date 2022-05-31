@@ -2,7 +2,7 @@ package apphw2;
 abstract class Car{
 	String name;
 	int price;
-	void printInfo(){System.out.println("차 이름은 "+name+"이고 가격은 "+price+"입니다.");}
+	void printInfo(){System.out.println("차 이름은 "+this.name+"이고 가격은 "+this.price+"입니다.");}
 	abstract void printSignature();
 }
 class Benz extends Car{
